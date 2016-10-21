@@ -44,19 +44,6 @@ app.controller('navCtrl', function ($scope, $location) {
 
 app.controller('contactController', function ($scope, $http) {
 
-    $scope.submitForm = function() {
 
-        $http({
-
-            url: "send_form_email.php",
-            data: $scope.form,
-            method: 'POST',
-
-        }).success(function(data){
-
-            console.log("OK", data)
-
-        }).error(function(err){"ERR", console.log(err)})
-    };
 
 });
