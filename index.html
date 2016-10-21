@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <title>Digregorio Law</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css">
     <link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body ng-app="myApp">
@@ -31,7 +33,22 @@
     </div>
     <hr>
     <div ng-view></div>
-    <footer></footer>
+    <footer class="social">
+        <div class="footer-content">
+            <ul class="icons nav nav-pills nav-stacked">
+                <li class="linked">
+                    <i class="fa fa-linkedin-square fa-2x fa-fw" aria-hidden="true"></i>LinkedIn
+                </li><br>
+                <li class="facebook">
+                    <i class="fa fa-facebook-square fa-2x fa-fw"></i>Facebook
+                </li><br>
+                <li class="email">
+                    <i class="fa fa-envelope-square fa-2x fa-fw" aria-hidden="true"></i>E-Mail
+                    </i><br>
+                </li>
+            </ul>
+        </div>
+    </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.8/angular.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.8/angular-route.js"></script>
     <script src="app.js"></script>
