@@ -20,7 +20,7 @@ app.config(['$routeProvider', function ($routeProvider) {
     })
         .when('/contact', {
         templateUrl: 'partials/contact.html',
-        controller: 'earningsController'
+        controller: 'contactController'
     })
         .otherwise({
         redirectTo: '/home'
@@ -40,4 +40,23 @@ app.controller('navCtrl', function ($scope, $location) {
             return 'inactive';
         }
     };
+});
+
+app.controller('contactController', function ($scope, $http) {
+
+    $scope.submitForm = function() {
+
+        $http({
+
+            url: "send_form_email.php",
+            data: $scope.form,
+            method: 'POST',
+
+        }).success(function(data){
+
+            console.log("OK", data)
+
+        }).error(function(err){"ERR", console.log(err)})
+    };
+
 });
