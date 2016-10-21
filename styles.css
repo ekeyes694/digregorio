@@ -6,29 +6,58 @@ body {
     background: #595b5b;
 }
 
-header {
-    background-color: #6bbdf4;
-    padding: 3em;
-}
-
-.name{
-    font-family: 'Dancing Script', cursive;
-}
-
 /*-----------------------------
-Footer
+Header
 -------------------------------*/
 .social {
     background-color: #6bbdf4;
     overflow: auto;
-    padding-bottom: 2.375rem;
-    text-align: center;
+    padding: 1.5em;
 }
-.icons{
-    list-style: none;
+.name {
+    font-family: 'Dancing Script', cursive;
+    float: left;
+}
+
+.icons {
     float: right;
-    margin-top: 6em;
-    margin-right: 8em;
+    width: 13%;
+    margin-top: .4em;
+}
+
+.icons li {
+    font: bold 12px/18px sans-serif;
+    display: inline-block;
+    margin-right: -4px;
+    position: relative;
+    padding: 5px 20px;
+    cursor: pointer;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -ms-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s;
+}
+
+.contact-info li{
+    font: bold 12px/18px sans-serif;
+    display: inline-block;
+    margin-right: -4px;
+    position: relative;
+    padding: 5px 20px;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -ms-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s;
+}
+.contact-info {
+    color: #fff;
+    font-size: 12px;
+    list-style: none;
+    display: block;
+    float: right;
+    width: 13%;
 }
 
 .fa {
@@ -40,7 +69,6 @@ Footer
 .icons .email:hover, .icons .linked:hover, .icons .facebook:hover {
     cursor: pointer;
     color: #fff;
-    border-bottom: 1px solid #fff;
 }
 
 .social .email {
@@ -62,7 +90,7 @@ hr {
     margin-top: 0em;
     width: 37%;
 }
-.nav {
+.navigation {
     text-align: left;
     display: inline;
     padding: 15px 4px 17px 0;
@@ -72,7 +100,7 @@ a {
     text-decoration: none;
     color: #eee9dc;
 }
-.nav li {
+.navigation li {
     font: bold 12px/18px sans-serif;
     display: inline-block;
     margin-right: -4px;
@@ -85,11 +113,11 @@ a {
     -o-transition: all 0.2s;
     transition: all 0.2s;
 }
-.nav li:hover {
+.navigation li:hover {
     border-bottom: 1px solid #6bbdf4;
     color: #6bbdf4;
 }
-.nav li .attorneys {
+.navigation li .attorneys {
     padding: 0;
     position: absolute;
     top: 30px;
@@ -107,16 +135,16 @@ a {
     -o-transition: opacity 0.2s;
     -transition: opacity 0.2s;
 }
-.nav li .attorneys li {
+.navigation li .attorneys li {
     background: #555;
     display: block;
     text-shadow: 0 -1px 0 #000;
 }
-.nav li .attorneys li:hover {
+.navigation li .attorneys li:hover {
     background: #666;
     color: #6bbdf4;
 }
-.nav li:hover .attorneys {
+.navigation li:hover .attorneys {
     display: block;
     opacity: 1;
     color: #6bbdf4;
