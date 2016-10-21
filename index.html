@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Digregorio Law</title>
+    <link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body ng-app="myApp">
+   <header>
+       <h1 class="name">DiGregorio Law</h1>
+   </header>
+
+    <div class="navlinks" ng-controller="navCtrl">
+
+        <ul class="nav">
+            <a href="#/home"><li>Home</li></a>
+            <li>Our Team
+                <ul class="attorneys">
+                    <a href="#/jen"><li>
+                        Jennifer
+                        </li></a>
+                    <a href="#/amy"><li>
+                    Amy
+                        </li></a>
+                </ul>
+            </li>
+            <a href="#/services"><li>Services</li></a>
+        <a href="#/contact"><li>Contact Us</li></a>
+        </ul>
+    </div>
+    <hr>
+    <div ng-view></div>
+    <footer></footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.8/angular.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.8/angular-route.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
