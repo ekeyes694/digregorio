@@ -22,7 +22,7 @@ Header
 .icons {
     float: right;
     width: 13%;
-    margin-top: .4em;
+    margin-top: -1em;
 }
 
 .icons li {
@@ -57,7 +57,7 @@ Header
     list-style: none;
     display: block;
     float: right;
-    width: 13%;
+    width: 15%;
 }
 
 .fa {
@@ -120,7 +120,7 @@ a {
 .navigation li .attorneys {
     padding: 0;
     position: absolute;
-    top: 30px;
+    top: 29px;
     left: 0;
     width: 150px;
     -webkit-box-shadow: none;
@@ -152,7 +152,7 @@ a {
 }
 
 .navlinks {
-    margin-left: 32.5em;
+    margin-left: 29em;
     margin-top: 1em;
     margin-bottom: .5em;
     width: 100%;
@@ -250,6 +250,7 @@ a {
     color: transparent;
     text-align: justify;
     word-break: break-word;
+    font-size: 14px;
     hyphens: auto;
     overflow: hidden;
 }
@@ -317,7 +318,7 @@ home
     padding-top: 8em;
     padding-bottom: 8em;
     padding-right: 17.9em;
-    padding-left: 18em;
+    padding-left: 14.7em;
     width: 50%;
     text-align: center;
 }
@@ -348,7 +349,7 @@ home
 .quotes {
     z-index: 1;
     color: #6bbdf4;
-    margin-left: 45em;
+    margin-left: 41em;
     margin-top: 9em;
     font-size: 19px;
     font-weight: bold;
@@ -402,6 +403,7 @@ contact
 ----------------------------------------*/
 form {
     color: #666;
+    padding: 2em;
 }
 input {
     padding: 1em;
