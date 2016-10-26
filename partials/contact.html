@@ -1,12 +1,15 @@
 <div class="main">
-    <?=$thankYou ?>
-    <form method="post" action="contact.php">
-        First Name:    <br/><input type="text" name="senderFirst">    <br/><br/>
-        Last Name:    <br/><input type="text" name="senderLast">    <br/><br/>
-        Phone Number:    <br/><input type="text" name="number">    <br/><br/>
-        Email Address: <br/><input type="text" name="senderEmail"> <br/><br/>
-        Description:<br/> <textarea rows="3" cols="25" name="message" ng-model="form.textareacontent"></textarea>
-        <br/>
-        <input type="submit">
+    <form class="email" action="/mailer.php" method="post">
+        <p>Name:</p>
+        <input type="text" name="name" />
+        <p>Phone:</p>
+        <input type="text" name="phone">
+        <p>E-mail:</p>
+        <input type="text" name="email" />
+        <p>Subject:</p>
+        <input type="text" name="subject" />
+        <p>Message:</p>
+        <textarea name="message"></textarea></p>
+    <input class="send" type="submit" value="Send">
     </form>
 </div>
