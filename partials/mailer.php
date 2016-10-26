@@ -1,65 +1,30 @@
 <?php
-/* Set e-mail recipient */
-$myemail = "sportsfiend06@aol.com";
+if (empty($_POST) === false) {
+    $errors = array();
 
-/* Check all form inputs using check_input function */
-$name = check_input($_POST['name'], "Enter your name");
-$subject = check_input($_POST['subject'], "Enter a subject");
-$phone = check_input($_POST['phone'], "Enter your phone number")
-$email = check_input($_POST['email']);
-$message = check_input($_POST['message'], "Write your message");
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+    $phone = $_POST['phone'];
+    $message = $_POST['message'];
 
-/* If e-mail is not valid show error message */
-if (!preg_match("/([\w\-]+\@[\w\-]+\.[\w\-]+)/", $email))
-{
-    show_error("E-mail address not valid");
-}
-/* Let's prepare the message for the e-mail */
-$message = "
-
-Name: $name
-Phone: $phone
-E-mail: $email
-Subject: $subject
-
-Message:
-$message
-
-";
-
-/* Send the message using mail() function */
-mail($myemail, $subject, $message);
-
-/* Redirect visitor to the thank you page */
-header('Location: thanks.html');
-exit();
-
-/* Functions we used */
-function check_input($data, $problem='')
-{
-    $data = trim($data);
-    $data = stripslashes($data);
-    $data = htmlspecialchars($data);
-    if ($problem && strlen($data) == 0)
-    {
-        show_error($problem);
+    if (empty($name) === true || empty($email) === true || empty($phone) === true || empty($message) === true) {
+        $errors[] = 'Name, E-mail, Phone, and Message required!';
     }
-    return $data;
+    else {
+        if (filter_var($email, FILTER_VALIDATE_EMAIL) === false) {
+            $errors[] = 'That\'s not a valid email address';
+        }
+        if (ctype_alpha($name) === false) {
+            $errors[] = 'Name must only contain letters';
+        }
+        if (filter_var($phone, FILTER_VALUE_INT) === false) {
+            $errors[] = 'Phone number must only be numbers';
+        }
+    }
+
+    if (empty($errors) === true) {
+        mail('sportsfiend06@aol.com', 'Contact form', $message, 'From: ' . $email);
+        header('Location: contact.html?sent');
+        exit();
+    }
 }
-
-function show_error($myError)
-{
-?>
-<html>
-    <body>
-
-        <p>Please correct the following error:</p>
-        <strong><?php echo $myError; ?></strong>
-        <p>Hit the back button and try again</p>
-
-    </body>
-</html>
-<?php
- exit();
-}
-?>
