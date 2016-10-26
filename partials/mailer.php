@@ -12,7 +12,7 @@ if (empty($_POST) === false) {
     }
     else {
         if (filter_var($email, FILTER_VALIDATE_EMAIL) === false) {
-            $errors[] = 'That\'s not a valid email address';
+            $errors[] = 'That\'s not a valid e-mail address';
         }
         if (ctype_alpha($name) === false) {
             $errors[] = 'Name must only contain letters';
@@ -28,3 +28,4 @@ if (empty($_POST) === false) {
         exit();
     }
 }
+?>
