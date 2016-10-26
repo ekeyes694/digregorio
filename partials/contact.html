@@ -11,7 +11,7 @@ echo '</ul>
 }
 ?>
 <div class="main">
-    <form class="email" action="/mailer.php" method="post">
+    <form class="email" action="mailer.php" method="post">
         <p>Name:</p>
         <input type="text" name="name" id="name" <?php if (isset($_POST['name']) === true) { echo 'value="', strip_tags($_POST['name']), '"'; } ?> />
         <p>Phone:</p>
