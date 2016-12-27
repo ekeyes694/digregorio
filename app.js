@@ -1,4 +1,4 @@
-var app = angular.module('myApp', ['ngRoute']);
+var app = angular.module('myApp', ['google-maps', 'ngRoute']);
 app.config(['$routeProvider', function ($routeProvider) {
     $routeProvider
         .when('/home', {
@@ -18,9 +18,13 @@ app.config(['$routeProvider', function ($routeProvider) {
         templateUrl: 'partials/services.html',
         controller: 'earningsController'
     })
-        .when('/contact', {
-        templateUrl: 'partials/contact.html',
-        controller: 'contactController'
+        .when('/form', {
+        templateUrl: 'partials/form.html',
+        controller: 'formController'
+    })
+        .when('/map', {
+        templateUrl: 'partials/map.html',
+        controller: 'mapController'
     })
         .otherwise({
         redirectTo: '/home'
@@ -42,8 +46,32 @@ app.controller('navCtrl', function ($scope, $location) {
     };
 });
 
-app.controller('contactController', function ($scope, $http) {
+app.controller('mapController', ['$scope', function ($scope) {
+    $scope.map = {
+        control: {},
+        center: {
+            latitude: 42.091338,
+            longitude: -70.708145
+        },
+        zoom: 14
+    };
 
+    $scope.marker = {
+        center: {
+            latitude: 42.091338,
+            longitude: -70.708145
+        }
+    };
 
+    $scope.infowindow = new google.maps.InfoWindow();
 
-});
+    $scope.show = false;
+
+    $scope.showWindow = function() {
+       if ($scope.marker) {
+           $scope.show = true;
+       } else {
+           $scope.show = false;
+       }
+    };
+}]);

@@ -10,9 +10,14 @@
 </head>
 <body ng-app="myApp">
    <header class="social">
-       <div class="header-content">
-           <h1 class="name">DiGregorio & Associates</h1>
-           <div class="icons">
+       <div class="name">
+           <ul>
+               <li class="name-title">Jennifer DiGregorio</li>
+               <li>Lawyer & Mediator</li>
+           </ul>
+       </div>
+         <!--<div class="header-content">
+          <div class="icons">
                <ul class="nav nav-pills nav-stacked">
                    <li class="linked">
                        <i class="fa fa-linkedin-square fa-2x fa-fw" aria-hidden="true"></i>LinkedIn
@@ -27,7 +32,8 @@
                        <br>
                    </li>
                 </ul>
-       </div>
+            </div>
+                </div>-->
     <div class="contact-info">
         <ul class="nav nav-pills nav-stacked">
             <li>One Snow Road Marshfield, MA, 02050</li>
@@ -35,7 +41,7 @@
             <li><i class="fa fa-fax fa-1x fa-fw" aria-hidden="true"></i>781.834.6616</li>
         </ul>
     </div>
-        </div>
+
    </header>
 
     <div class="navlinks" ng-controller="navCtrl">
@@ -53,13 +59,25 @@
                 </ul>
             </li>
             <a href="#/services"><li>Services</li></a>
-        <a href="#/contact"><li>Contact Us</li></a>
+            <li>Contact Us
+                <ul class="contact-options">
+                    <a href="#/form"><li>
+                        Get In Touch
+                        </li></a>
+                    <a href="#/map"><li>
+                        Find Us
+                        </li></a>
+                </ul>
+            </li>
         </ul>
     </div>
     <hr>
     <div ng-view></div>
+    <script data-require="google-maps@1.0.0" data-semver="1.0.0" src="https://maps.google.com/maps/api/js?key=AIzaSyD7buZcMEjcjwpMa8qztndpYmCxxP-Te2A"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.8/angular.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.8/angular-route.js"></script>
+    <script data-require="lodash-underscore@*" data-semver="2.4.1" src="https://rawgit.com/lodash/lodash/2.4.1/dist/lodash.underscore.min.js"></script>
+    <script data-require="angular-google-maps@*" data-semver="1.1.4" src="https://rawgit.com/nlaplante/angular-google-maps/1.1.4/dist/angular-google-maps.min.js"></script>
     <script src="app.js"></script>
 </body>
 </html>

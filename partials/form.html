@@ -13,7 +13,7 @@ echo '<li>', $error, '</li>';
 echo '</ul>'
 }
 ?>
-    <form class="email" action="mailer.php" method="post">
+    <form action="mailer.php" method="post">
         <p>Name:</p>
         <input type="text" name="name" id="name" <?php if (isset($_POST['name']) === true) { echo 'value="', strip_tags($_POST['name']), '"'; } ?>
         <p>Phone:</p>

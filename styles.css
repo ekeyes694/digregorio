@@ -3,22 +3,31 @@ body {
     font-size: 94%;
     font-family: 'Raleway', sans-serif;
     color: #eee9dc;
-    background: #595b5b;
+    background-image: url(./images/Flannel.jpeg);
 }
 
 /*-----------------------------
 Header
 -------------------------------*/
 .social {
-    background-color: #6bbdf4;
+
     overflow: auto;
     padding: 1.5em;
 }
 .name {
-    font-family: 'Dancing Script', cursive;
+    font-family: 'Times New Roman';
     float: left;
+    width: 31%;
+    font-size: 36px;
 }
-
+.name ul{
+    list-style: none;
+    color: #6bbdf4;
+}
+.name-title{
+    font-size: 45px;
+    color: #fff;
+}
 .icons {
     float: right;
     width: 13%;
@@ -40,8 +49,7 @@ Header
 }
 
 .contact-info li{
-    font: bold 12px/18px sans-serif;
-    display: inline-block;
+    list-style: none;
     margin-right: -4px;
     position: relative;
     padding: 5px 20px;
@@ -53,11 +61,11 @@ Header
 }
 .contact-info {
     color: #fff;
-    font-size: 12px;
-    list-style: none;
-    display: block;
+    font-size: 17px;
+    width: 22%;
     float: right;
-    width: 15%;
+    margin-top: 1em;
+    font-family: serif;
 }
 
 .fa {
@@ -145,6 +153,40 @@ a {
     color: #6bbdf4;
 }
 .navigation li:hover .attorneys {
+    display: block;
+    opacity: 1;
+    color: #6bbdf4;
+    visibility: visible;
+}
+
+.navigation li .contact-options {
+    padding: 0;
+    position: absolute;
+    top: 29px;
+    left: 0;
+    width: 150px;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transiton: opacity 0.2s;
+    -moz-transition: opacity 0.2s;
+    -ms-transition: opacity 0.2s;
+    -o-transition: opacity 0.2s;
+    -transition: opacity 0.2s;
+}
+.navigation li .contact-options li {
+    background: #555;
+    display: block;
+    text-shadow: 0 -1px 0 #000;
+}
+.navigation li .contact-options li:hover {
+    background: #666;
+    color: #6bbdf4;
+}
+.navigation li:hover .contact-options {
     display: block;
     opacity: 1;
     color: #6bbdf4;
@@ -303,6 +345,9 @@ home
     -moz-box-shadow: 1px 4px 44px -5px rgba(0,0,0,0.88);
     box-shadow: 1px 4px 44px -5px rgba(0,0,0,0.88);
 }
+.sections {
+    clear: both;
+}
 .about{
     background-color: #6bbdf4;
 }
@@ -315,13 +360,14 @@ home
     background-color: #555;
 }
 .about, .goal, .approach{
-    padding-top: 8em;
-    padding-bottom: 8em;
-    padding-right: 17.9em;
-    padding-left: 14.7em;
-    width: 50%;
+    float: left;
+    width: 25.24%;
+    padding: 2.9em;
+    padding-bottom: 9em;
     text-align: center;
+    margin-bottom: 5em;
 }
+
 
 .about-image{
     background-image: url(./images/about-image.jpg);
@@ -355,9 +401,7 @@ home
     font-weight: bold;
     font-family: 'Raleway', sans-serif;
 }
-.title{
-    text-align: center;
-}
+
 .fa-balance-scale, .fa-users, .fa-gavel{
     color: #fff;
 }
@@ -399,7 +443,7 @@ jen and amy
     margin-top: 2em;
 }
 /*--------------------------------------
-contact
+form
 ----------------------------------------*/
 form {
     color: #666;
@@ -407,6 +451,13 @@ form {
 }
 input {
     padding: 1em;
+}
+/*---------------------------------------
+map
+-----------------------------------------*/
+.angular-google-map-container {
+    height: 400px;
+    margin-bottom: 15px;
 }
 /* -------------------------------------
 * mobile phones (vertical version only)
